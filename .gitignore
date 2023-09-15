@@ -17,3 +17,5 @@ node_modules
 
 # Do not need to upload panic nova editor config files
 .nova
+
+README.md
