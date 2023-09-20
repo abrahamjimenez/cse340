@@ -66,6 +66,14 @@ nav * li {
 	font-weight: bolder;
 }
 
+/* reviews*/
+.reviews h2 {
+	padding-left: 40px;
+}
+
+.reviews li {
+	margin-bottom: 8px;
+}
 
 /* upgrades */
 .upgrades {
@@ -123,8 +131,7 @@ nav * li {
 
 .blue-bg {
 	width: 65px;
-	height: auto;
-	max-height: 65px;
+	height: 65px;
 
 }
 
@@ -136,6 +143,21 @@ nav * li {
 }
 
 @media only screen and (min-width: 500px) {
+	html {
+		height: 100%;
+		display: flex;
+		background-image: url("/images/site/small_check.jpg");
+	}
+
+	body {
+		max-width: 500px;
+		width: 100%;
+		margin: auto;
+		padding: 16px;
+		background-color: white;
+		border: 2px solid #16a1c9;
+	}
+
 	/* hero */
 	.header-car {
 		left: 250px;
