@@ -5,6 +5,11 @@
 	box-sizing: border-box;
 }
 
+/* global */
+h1, h2, h3, h4, h5, p, a {
+	font-family: 'Inclusive Sans', sans-serif;
+}
+
 /* header */
 header {
 	display: flex;
@@ -60,10 +65,6 @@ nav * li {
 	margin: 0;
 	color: #16a1c9;
 	list-style-type: none;
-}
-
-.bolder {
-	font-weight: bolder;
 }
 
 /* reviews*/
@@ -135,13 +136,6 @@ nav * li {
 
 }
 
-@media only screen and (min-width: 420px) {
-	/* hero */
-	.hero--container {
-		left: 8%;
-	}
-}
-
 @media only screen and (min-width: 500px) {
 	html {
 		height: 100%;
@@ -162,9 +156,11 @@ nav * li {
 	.header-car {
 		left: 250px;
 		width: 600px;
+		content: url("/images/vehicles/delorean.jpg");
 	}
 
 	.hero--container {
+		z-index: 2;
 		left: 16%;
 	}
 

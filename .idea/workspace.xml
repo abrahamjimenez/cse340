@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="Uploading Unversioned Files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="IntelliJ IDE configs" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +14,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="update/large-screen" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +63,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "assignment/unit01/assignment01",
     "last_opened_file_path": "/Users/abrahamjimenezromo/Desktop/cse340",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -92,6 +90,8 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -112,6 +112,7 @@
       <workItem from="1695219333040" duration="7707000" />
       <workItem from="1695227652994" duration="962000" />
       <workItem from="1695229229249" duration="1187000" />
+      <workItem from="1695238339200" duration="516000" />
     </task>
     <task id="LOCAL-00001" summary="Finished styling for mobile view">
       <option name="closed" value="true" />
@@ -145,7 +146,23 @@
       <option name="project" value="LOCAL" />
       <updated>1695227521446</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added media=&quot;screen&quot; to css &lt;link&gt;">
+      <option name="closed" value="true" />
+      <created>1695238572546</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1695238572546</updated>
+    </task>
+    <task id="LOCAL-00006" summary="IntelliJ IDE configs">
+      <option name="closed" value="true" />
+      <created>1695238602438</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1695238602438</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +184,8 @@
     <MESSAGE value="Added styling for large screens" />
     <MESSAGE value="Added &#10;- padding-left: 40px to .reviews h2 &#10;- spacing to .reviews li&#10;&#10;Fixed&#10;- Images height to 65px&#10;&#10;Feature&#10;- Centered body in html&#10;- Added small-check.jpg to html background" />
     <MESSAGE value="Uploading Unversioned Files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploading Unversioned Files" />
+    <MESSAGE value="Added media=&quot;screen&quot; to css &lt;link&gt;" />
+    <MESSAGE value="IntelliJ IDE configs" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>
