@@ -1,18 +1,23 @@
 <h1>Welcome to CSE Motors</h1>
 <section class="hero">
     <div class="hero--container">
-        <h2 class="blue">DMC Delorean</h2>
-        <ul class="blue">
-            <li>3 Cup Holders</li>
-            <li>Superman Doors</li>
-            <li>Fuzzy Dice</li>
-        </ul>
-        <img class="header-btn" src="/images/site/own_today.png" alt=""/>
-        <img class="header-car" src="/images/vehicles/delorean-tn.jpg" alt=""/>
+        <div class="hero_float_container">
+            <h2 class="blue">DMC Delorean</h2>
+            <ul class="blue">
+                <li>3 Cup Holders</li>
+                <li>Superman Doors</li>
+                <li>Fuzzy Dice</li>
+            </ul>
+            <img class="hero__btn" src="/images/site/own_today.png" alt=""/>
+        </div>
+        <picture class="hero_car_container">
+            <source srcset="/images/vehicles/delorean-tn.jpg" media="(max-width:600px)">
+            <img src="/images/vehicles/delorean.jpg" alt="Delorean Vehicle">
+        </picture>
     </div>
 </section>
 
-<div class="grid-container">
+<section class="grid-container">
     <div class="reviews">
         <h2>DMC Delorean Reviews</h2>
         <ul>
@@ -35,4 +40,4 @@
         <div><img src="/images/upgrades/hub-cap.jpg" alt="" class="blue-bg"><a href="" class="white-bg">Hub Caps</a>
         </div>
     </div>
-</div>
+</section>
