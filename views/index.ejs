@@ -1,18 +1,23 @@
 <h1>Welcome to CSE Motors</h1>
 <section class="hero">
     <div class="hero--container">
-        <h2 class="blue">DMC Delorean</h2>
-        <ul class="blue">
-            <li>3 Cup Holders</li>
-            <li>Superman Doors</li>
-            <li>Fuzzy Dice</li>
-        </ul>
-        <img class="header-btn" src="/images/site/own_today.png" alt=""/>
-        <img class="header-car" src="/images/vehicles/delorean-tn.jpg" alt=""/>
+        <div class="hero_float_container">
+            <h2 class="blue">DMC Delorean</h2>
+            <ul class="blue">
+                <li>3 Cup Holders</li>
+                <li>Superman Doors</li>
+                <li>Fuzzy Dice</li>
+            </ul>
+            <img class="hero__btn" src="/images/site/own_today.png" alt="" loading=lazy>
+        </div>
+        <picture class="hero_car_container">
+            <source srcset="/images/vehicles/delorean-tn.jpg" media="(max-width:640px)">
+            <img src="/images/vehicles/delorean.jpg" alt="Delorean Vehicle" loading="lazy">
+        </picture>
     </div>
 </section>
 
-<div class="grid-container">
+<section class="grid-container">
     <div class="reviews">
         <h2>DMC Delorean Reviews</h2>
         <ul>
@@ -26,13 +31,21 @@
 
     <div class="upgrades">
         <h2>Delorean Upgrades</h2>
-        <div><img src="/images/upgrades/flux-cap.png" alt="" class="blue-bg"><a href="" class="white-bg">Flux
-                Capacitor</a></div>
-        <div><img src="/images/upgrades/flame.jpg" alt="" class="blue-bg"><a href="" class="white-bg">Flame Decals</a>
+        <div>
+            <img src="/images/upgrades/flux-cap.png" alt="" class="blue-bg" loading="lazy">
+            <a href="" class="white-bg">Flux Capacitor</a>
         </div>
-        <div><img src="/images/upgrades/bumper_sticker.jpg" alt="" class="blue-bg"><a href="" class="white-bg">Bumper
-                Stickers</a></div>
-        <div><img src="/images/upgrades/hub-cap.jpg" alt="" class="blue-bg"><a href="" class="white-bg">Hub Caps</a>
+        <div>
+            <img src="/images/upgrades/flame.jpg" alt="" class="blue-bg" loading="lazy">
+            <a href="" class="white-bg">Flame Decals</a>
+        </div>
+        <div>
+            <img src="/images/upgrades/bumper_sticker.jpg" alt="" class="blue-bg" loading="lazy">
+            <a href="" class="white-bg">Bumper Stickers</a>
+        </div>
+        <div>
+            <img src="/images/upgrades/hub-cap.jpg" alt="" class="blue-bg" loading="lazy">
+            <a href="" class="white-bg">Hub Caps</a>
         </div>
     </div>
-</div>
+</section>

@@ -1,0 +1,38 @@
+.hero--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .hero_float_container {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 168px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1;
+
+
+    img {
+      width: 100%;
+    }
+
+    h2.blue {
+      padding-bottom: 8px;
+    }
+
+    img {
+      padding-top: 8px;
+    }
+
+    .blue {
+      padding: 0;
+      margin: 0;
+      color: #16a1c9;
+      list-style-type: none;
+    }
+  }
+
+  .hero_car_container {
+    margin-left: -64px;
+  }
+}
