@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/public/scss/base/_global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/components/_hero.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/components/_main-content.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/components/_reviews.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/components/_upgrades.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/layouts/_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/layouts/_main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/layouts/_media-queries.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/layouts/_navigation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/styles.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/scss/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/static.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/static.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +114,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Data Editor and Viewer",
     "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
@@ -181,6 +164,7 @@
       <workItem from="1696695836824" duration="8893000" />
       <workItem from="1696709753725" duration="44000" />
       <workItem from="1696709814608" duration="1979000" />
+      <workItem from="1696711812662" duration="2002000" />
     </task>
     <task id="LOCAL-00001" summary="Finished styling for mobile view">
       <option name="closed" value="true" />
@@ -222,7 +206,55 @@
       <option name="project" value="LOCAL" />
       <updated>1696711733789</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add .idea files to version control&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1696711848657</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696711848657</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file">
+      <option name="closed" value="true" />
+      <created>1696712077177</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696712077177</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[style]: Modified html for responsive view&#10;&#10;- Add &lt;picture&gt; for mandalorian small and large images.&#10;- Rename div to section for &quot;grid-container&quot;.">
+      <option name="closed" value="true" />
+      <created>1696712215701</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696712215701</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added .env and .yaml files to version control">
+      <option name="closed" value="true" />
+      <created>1696712933383</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696712933383</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Fixed HTML Validation Errors">
+      <option name="closed" value="true" />
+      <created>1696713702316</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696713702316</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1696713792812</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1696713792812</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +279,14 @@
     <MESSAGE value="Added &#10;- padding-left: 40px to .reviews h2 &#10;- spacing to .reviews li&#10;&#10;Fixed&#10;- Images height to 65px&#10;&#10;Feature&#10;- Centered body in html&#10;- Added small-check.jpg to html background" />
     <MESSAGE value="Uploading Unversioned Files" />
     <MESSAGE value="Add .idea files to version control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add .idea files to version control" />
+    <MESSAGE value="Add .idea files to version control&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file" />
+    <MESSAGE value="[style]: Modified html for responsive view&#10;&#10;- Add &lt;picture&gt; for mandalorian small and large images.&#10;- Rename div to section for &quot;grid-container&quot;." />
+    <MESSAGE value="Added .env and .yaml files to version control" />
+    <MESSAGE value="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="Fixed HTML Validation Errors" />
+    <MESSAGE value="Fixed HTML Validation Errors&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
   </component>
 </project>
