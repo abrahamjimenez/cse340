@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
-      <change beforePath="$PROJECT_DIR$/utilities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +183,7 @@
       <workItem from="1696992946575" duration="3558000" />
       <workItem from="1697039612038" duration="9583000" />
       <workItem from="1697071290042" duration="40000" />
-      <workItem from="1697075163485" duration="4874000" />
+      <workItem from="1697075163485" duration="5797000" />
     </task>
     <task id="LOCAL-00001" summary="Finished styling for mobile view">
       <option name="closed" value="true" />
@@ -411,7 +409,31 @@
       <option name="project" value="LOCAL" />
       <updated>1697079478749</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="The buildClassificationGrid Function">
+      <option name="closed" value="true" />
+      <created>1697080377247</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1697080377247</updated>
+    </task>
+    <task id="LOCAL-00030" summary="The buildClassificationGrid Function&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1697080689264</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1697080689264</updated>
+    </task>
+    <task id="LOCAL-00031" summary="The buildClassificationGrid Function&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1697080763350</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1697080763350</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,8 +470,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Add .idea files to version control&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
-    <MESSAGE value="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file" />
     <MESSAGE value="[style]: Modified html for responsive view&#10;&#10;- Add &lt;picture&gt; for mandalorian small and large images.&#10;- Rename div to section for &quot;grid-container&quot;." />
     <MESSAGE value="Added .env and .yaml files to version control" />
     <MESSAGE value="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
@@ -473,6 +493,8 @@
     <MESSAGE value="The Inventory Controller&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="The Inventory Model" />
     <MESSAGE value="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="The buildClassificationGrid Function" />
+    <MESSAGE value="The buildClassificationGrid Function&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="The buildClassificationGrid Function&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
   </component>
 </project>

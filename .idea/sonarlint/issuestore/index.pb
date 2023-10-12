@@ -42,3 +42,7 @@ H
 views/layouts/layout.ejs,c/c/cc0f3e01056ccde6c06eca0e78fe6f5eca4e71db
 B
 utilities/index.js,4/5/458f0751f34ff396179ccc34fead41c0d0583a22
+H
+routes/inventoryRoute.js,0/d/0d1a0b67ac9cc1e1cdd2ad146e4f0a295b7992ee
+L
+controllers/invController.js,c/6/c6c42ce195fdb9777b2795d54d50496b054996e0
