@@ -4,13 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/cse340.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cse340.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -98,27 +109,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "style/fix-styling",
-    "last_opened_file_path": "/Users/abrahamjimenezromo/Desktop/cse340",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Data Editor and Viewer",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/abrahamjimenezromo/Desktop/cse340&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/scss/base" />
@@ -165,6 +177,19 @@
       <workItem from="1696709753725" duration="44000" />
       <workItem from="1696709814608" duration="1979000" />
       <workItem from="1696711812662" duration="2002000" />
+      <workItem from="1696971409641" duration="323000" />
+      <workItem from="1696979497896" duration="35000" />
+      <workItem from="1696982107369" duration="999000" />
+      <workItem from="1696983262781" duration="218000" />
+      <workItem from="1696983510790" duration="37000" />
+      <workItem from="1696983559207" duration="127000" />
+      <workItem from="1696983697899" duration="208000" />
+      <workItem from="1696983958571" duration="107000" />
+      <workItem from="1696984089312" duration="1877000" />
+      <workItem from="1696986366479" duration="732000" />
+      <workItem from="1696992946575" duration="3558000" />
+      <workItem from="1697039612038" duration="9583000" />
+      <workItem from="1697071290042" duration="40000" />
     </task>
     <task id="LOCAL-00001" summary="Finished styling for mobile view">
       <option name="closed" value="true" />
@@ -254,18 +279,115 @@
       <option name="project" value="LOCAL" />
       <updated>1696713792812</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Removed">
+      <option name="closed" value="true" />
+      <created>1696993750029</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1696993750029</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Removed">
+      <option name="closed" value="true" />
+      <created>1696993952137</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1696993952137</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Project Settings">
+      <option name="closed" value="true" />
+      <created>1696994162636</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696994162636</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Database Connection">
+      <option name="closed" value="true" />
+      <created>1696994476267</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696994476267</updated>
+    </task>
+    <task id="LOCAL-00016" summary="The Inventory Model">
+      <option name="closed" value="true" />
+      <created>1697039210857</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1697039210857</updated>
+    </task>
+    <task id="LOCAL-00017" summary="The base controller">
+      <option name="closed" value="true" />
+      <created>1697040915524</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697040915524</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Alter the &quot;Index Route&quot;">
+      <option name="closed" value="true" />
+      <created>1697041773384</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1697041773384</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Build the Utilities file and functions">
+      <option name="closed" value="true" />
+      <created>1697046450163</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697046450163</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Build the Utilities file and functions&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1697046724492</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1697046724492</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Adjust the navigation.ejs Partial File">
+      <option name="closed" value="true" />
+      <created>1697049137845</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697049137845</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -287,6 +409,16 @@
     <MESSAGE value="Fixed HTML Validation Errors" />
     <MESSAGE value="Fixed HTML Validation Errors&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="Removed&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="Removed" />
+    <MESSAGE value="Project Settings" />
+    <MESSAGE value="Database Connection" />
+    <MESSAGE value="The Inventory Model" />
+    <MESSAGE value="The base controller" />
+    <MESSAGE value="Alter the &quot;Index Route&quot;" />
+    <MESSAGE value="Build the Utilities file and functions" />
+    <MESSAGE value="Build the Utilities file and functions&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="Adjust the navigation.ejs Partial File" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjust the navigation.ejs Partial File" />
   </component>
 </project>
