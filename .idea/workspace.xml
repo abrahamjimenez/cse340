@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="" />
+    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="The Inventory Items Display">
+      <change beforePath="$PROJECT_DIR$/views/inventory/classification.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/inventory/classification.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,28 +104,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/abrahamjimenezromo/Desktop/cse340",
-    "list.type.of.created.stylesheet": "SCSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "settings.editor.selected.configurable": "reference.idesettings.emmet",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/abrahamjimenezromo/Desktop/cse340&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.idesettings.emmet&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/scss/base" />
@@ -184,6 +186,7 @@
       <workItem from="1697039612038" duration="9583000" />
       <workItem from="1697071290042" duration="40000" />
       <workItem from="1697075163485" duration="5797000" />
+      <workItem from="1697135162091" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary="Finished styling for mobile view">
       <option name="closed" value="true" />
@@ -433,7 +436,39 @@
       <option name="project" value="LOCAL" />
       <updated>1697080763350</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="The Content Heading">
+      <option name="closed" value="true" />
+      <created>1697135859445</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1697135859445</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Project Settings">
+      <option name="closed" value="true" />
+      <created>1697135870866</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1697135870866</updated>
+    </task>
+    <task id="LOCAL-00034" summary="A Message Block">
+      <option name="closed" value="true" />
+      <created>1697136021389</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1697136021389</updated>
+    </task>
+    <task id="LOCAL-00035" summary="The Inventory Items Display">
+      <option name="closed" value="true" />
+      <created>1697136070012</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1697136070012</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,15 +505,11 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="[style]: Modified html for responsive view&#10;&#10;- Add &lt;picture&gt; for mandalorian small and large images.&#10;- Rename div to section for &quot;grid-container&quot;." />
-    <MESSAGE value="Added .env and .yaml files to version control" />
-    <MESSAGE value="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="Fixed HTML Validation Errors" />
     <MESSAGE value="Fixed HTML Validation Errors&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="Fixed HTML Validation Errors&#10;&#10;This commit also improved CLS by updating &lt;source&gt; max-width to the same as the media query. 600 to 640px.&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="Removed&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="Removed" />
-    <MESSAGE value="Project Settings" />
     <MESSAGE value="Database Connection" />
     <MESSAGE value="The base controller" />
     <MESSAGE value="Alter the &quot;Index Route&quot;" />
@@ -495,6 +526,10 @@
     <MESSAGE value="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="The buildClassificationGrid Function" />
     <MESSAGE value="The buildClassificationGrid Function&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="The buildClassificationGrid Function&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="The Content Heading" />
+    <MESSAGE value="Project Settings" />
+    <MESSAGE value="A Message Block" />
+    <MESSAGE value="The Inventory Items Display" />
+    <option name="LAST_COMMIT_MESSAGE" value="The Inventory Items Display" />
   </component>
 </project>
