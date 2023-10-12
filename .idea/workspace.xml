@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/cse340.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cse340.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c84dcdc6bbe3d7817c49dcdc327b926fea1808a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0a39633b-54bf-4a49-90c3-577bd3da0267" name="Changes" comment="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
       <change beforePath="$PROJECT_DIR$/utilities/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/utilities/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,28 +104,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/abrahamjimenezromo/Desktop/cse340&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/abrahamjimenezromo/Desktop/cse340",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "pnpm",
+    "settings.editor.selected.configurable": "reference.idesettings.emmet",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/scss/base" />
@@ -190,6 +185,7 @@
       <workItem from="1696992946575" duration="3558000" />
       <workItem from="1697039612038" duration="9583000" />
       <workItem from="1697071290042" duration="40000" />
+      <workItem from="1697075163485" duration="4874000" />
     </task>
     <task id="LOCAL-00001" summary="Finished styling for mobile view">
       <option name="closed" value="true" />
@@ -359,7 +355,63 @@
       <option name="project" value="LOCAL" />
       <updated>1697049137845</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Webstorm Files">
+      <option name="closed" value="true" />
+      <created>1697077045750</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697077045750</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Inventory Routes">
+      <option name="closed" value="true" />
+      <created>1697077050327</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1697077050327</updated>
+    </task>
+    <task id="LOCAL-00024" summary="server.js File">
+      <option name="closed" value="true" />
+      <created>1697077267300</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1697077267300</updated>
+    </task>
+    <task id="LOCAL-00025" summary="The Inventory Controller">
+      <option name="closed" value="true" />
+      <created>1697078347889</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1697078347889</updated>
+    </task>
+    <task id="LOCAL-00026" summary="The Inventory Controller&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1697078771601</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1697078771601</updated>
+    </task>
+    <task id="LOCAL-00027" summary="The Inventory Model">
+      <option name="closed" value="true" />
+      <created>1697079344443</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1697079344443</updated>
+    </task>
+    <task id="LOCAL-00028" summary="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;">
+      <option name="closed" value="true" />
+      <created>1697079478749</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1697079478749</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -396,11 +448,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Finished styling for mobile view" />
-    <MESSAGE value="Added styling for large screens" />
-    <MESSAGE value="Added &#10;- padding-left: 40px to .reviews h2 &#10;- spacing to .reviews li&#10;&#10;Fixed&#10;- Images height to 65px&#10;&#10;Feature&#10;- Centered body in html&#10;- Added small-check.jpg to html background" />
-    <MESSAGE value="Uploading Unversioned Files" />
-    <MESSAGE value="Add .idea files to version control" />
     <MESSAGE value="Add .idea files to version control&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="[style]: Refactored CSS to SCSS&#10;&#10;This commit also removes old &quot;styles.css&quot; file" />
     <MESSAGE value="[style]: Modified html for responsive view&#10;&#10;- Add &lt;picture&gt; for mandalorian small and large images.&#10;- Rename div to section for &quot;grid-container&quot;." />
@@ -413,12 +460,19 @@
     <MESSAGE value="Removed" />
     <MESSAGE value="Project Settings" />
     <MESSAGE value="Database Connection" />
-    <MESSAGE value="The Inventory Model" />
     <MESSAGE value="The base controller" />
     <MESSAGE value="Alter the &quot;Index Route&quot;" />
     <MESSAGE value="Build the Utilities file and functions" />
     <MESSAGE value="Build the Utilities file and functions&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
     <MESSAGE value="Adjust the navigation.ejs Partial File" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjust the navigation.ejs Partial File" />
+    <MESSAGE value="Webstorm Files" />
+    <MESSAGE value="Inventory Routes" />
+    <MESSAGE value="IDE Settings&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="server.js File" />
+    <MESSAGE value="The Inventory Controller" />
+    <MESSAGE value="The Inventory Controller&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <MESSAGE value="The Inventory Model" />
+    <MESSAGE value="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="The Inventory Model&#10;&#10;Signed-off-by: Abraham Jimenez &lt;abraham.jimenez.romo@gmail.com&gt;" />
   </component>
 </project>
