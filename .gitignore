@@ -23,3 +23,6 @@ pnpm-lock.yaml
 
 #Ignore README file
 README.md
+
+# Ignore Project Files
+.idea
