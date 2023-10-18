@@ -11,7 +11,12 @@ h1, h2, h3, h4, h5, p, a {
 }
 
 body {
-  background-color: #a2a2a2;
+  background-color: white;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
 }
 
 header {
@@ -30,7 +35,7 @@ header .siteName > a {
 nav ul {
   display: flex;
   justify-content: space-around;
-  background: #1c1a27;
+  background: #c3c3c3;
   color: white;
   padding: 8px 0;
 }
@@ -127,11 +132,29 @@ nav * li {
   height: 65px;
 }
 
+#inv-display li {
+  list-style-type: none;
+}
+#inv-display li:nth-child(odd) {
+  background: #c3c3c3;
+}
+
+#detailed-display .inventory--details .inventory__bold {
+  font-weight: bold;
+}
+#detailed-display .inventory--details p {
+  margin: 0 0 0 16px;
+  padding: 8px;
+}
+#detailed-display .inventory--details p:nth-of-type(odd) {
+  background: #c3c3c3;
+}
+
 @media only screen and (min-width: 640px) {
   html {
     height: 100%;
     display: flex;
-    background: url("/images/site/small_check.jpg");
+    background: url("../../images/site/small_check.jpg");
   }
   body {
     max-width: 640px;
@@ -157,6 +180,16 @@ nav * li {
   }
   .reviews > ul {
     grid-row: 2/4;
+  }
+  /*
+  Inventory Details
+  */
+  #detailed-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #detailed-display img {
+    margin-top: 24px;
   }
 }
 

@@ -1,0 +1,10 @@
+#inv-display {
+
+	li {
+		list-style-type: none;
+
+		&:nth-child(odd) {
+			background: #c3c3c3;
+		}
+	}
+}

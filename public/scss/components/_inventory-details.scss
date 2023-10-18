@@ -1,0 +1,17 @@
+#detailed-display {
+
+	.inventory--details {
+		.inventory__bold {
+			font-weight: bold;
+		}
+
+		p {
+			margin: 0 0 0 16px;
+			padding: 8px;
+
+			&:nth-of-type(odd) {
+				background: #c3c3c3;
+			}
+		}
+	}
+}
