@@ -32,7 +32,7 @@ invCont.buildDetailedView = async function (req, res, next) {
 	const invModelData = data[0].inv_model;
 	const invYear = data[0].inv_year;
 
-	res.render("./inventory/classification", {
+	res.render("./inventory/details", {
 		title: `${invMake} ${invModelData} ${invYear}`,
 		nav,
 		grid,
