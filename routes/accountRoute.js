@@ -6,4 +6,7 @@ const accountsController = require("../controllers/accountController");
 // Route to build login page in account
 router.get("/login", utilities.handleErrors(accountsController.buildLogin));
 
+// Route to build register page in account
+router.get("/register", utilities.handleErrors(accountsController.buildRegister))
+
 module.exports = router;
