@@ -1,22 +1,21 @@
-<h1><%= title %></h1>
-<%- messages() %>
-<form action="">
+<h1><%= title; %></h1>
+<%#- messages() %>
+<form action="" class="login--form">
     <label for="account_email">Email:</label>
     <input type="email" id="account_email" name="account_email" required>
 
     <label for="account_password">Password:</label>
     <input type="password" id="account_password" name="account_password" required>
 
-    <p>Passwords must be a minimum of 12 characters and include 1 capital letter, 1 number, and 1 special character</p>
-    <button>Show Password</button>
+    <div class="form__password">
+        <p>Passwords must be a minimum of 12 characters and include 1 capital letter, 1 number, and 1 special
+            character</p>
+        <button>Show Password</button>
+    </div>
 
-    <input type="submit" value="Login">
+    <div class="form__center">
+        <input type="submit" value="Login">
+    </div>
 
-    <p>No account? <a href="/account/register">Sign up!</a></p>
-
-<!--
-Todo: Add classes and ID's to form
-Todo: Style Form with css
-Todo: Create _form.scss for all forms
--->
+    <p>No account? <a class="form__links" href="/account/register">Sign up!</a></p>
 </form>
