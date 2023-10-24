@@ -35,7 +35,7 @@ async function getDetailedView(inventory_id) {
 		);
 		return data.rows;
 	} catch (error) {
-		console.error("getclassificationsbyid error " + error);
+		console.error("getinventoryidbyid error " + error);
 	}
 }
 
