@@ -161,9 +161,6 @@ form {
 form label {
   display: block;
 }
-form .form__password {
-  display: none;
-}
 form input, form button {
   width: 100%;
   padding: 8px;
