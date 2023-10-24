@@ -1,0 +1,47 @@
+form {
+	outline: #16a1c9 outset 4px;
+	border-radius: 8px;
+	padding: 16px 24px;
+	background: #c3c3c3;
+	max-width: 400px;
+	margin: 0 auto;
+
+	label {
+		display: block;
+	}
+
+	.form__password {
+		display: none;
+	}
+
+	input, button {
+		width: 100%;
+		padding: 8px;
+		border: outset 2px black;
+		border-radius: 8px;
+		background: white;
+	}
+
+	button {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.form__center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		input {
+			&[type="submit"] {
+				background: white;
+				margin: 32px 0 8px;
+				width: 40%;
+
+				&:active {
+					background: lightgray;
+				}
+			}
+		}
+	}
+}

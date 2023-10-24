@@ -150,6 +150,45 @@ nav * li {
   background: #c3c3c3;
 }
 
+form {
+  outline: #16a1c9 outset 4px;
+  border-radius: 8px;
+  padding: 16px 24px;
+  background: #c3c3c3;
+  max-width: 400px;
+  margin: 0 auto;
+}
+form label {
+  display: block;
+}
+form .form__password {
+  display: none;
+}
+form input, form button {
+  width: 100%;
+  padding: 8px;
+  border: outset 2px black;
+  border-radius: 8px;
+  background: white;
+}
+form button {
+  width: 100%;
+  margin: 0 auto;
+}
+form .form__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form .form__center input[type=submit] {
+  background: white;
+  margin: 32px 0 8px;
+  width: 40%;
+}
+form .form__center input[type=submit]:active {
+  background: lightgray;
+}
+
 @media only screen and (min-width: 640px) {
   html {
     height: 100%;
