@@ -9,4 +9,7 @@ router.get("/login", utilities.handleErrors(accountsController.buildLogin));
 // Route to build register page in account
 router.get("/register", utilities.handleErrors(accountsController.buildRegister))
 
+// Enable the registration route
+router.post("/register", utilities.handleErrors(accountsController.registerAccount))
+
 module.exports = router;
