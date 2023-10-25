@@ -1,4 +1,4 @@
-<h1><%= title ;%></h1>
+<h1><%= title; %></h1>
 <%#- messages() %>
 <form action="" class="register--form">
     <label for="account_firstname">First name:</label>
@@ -16,10 +16,31 @@
     <div class="form__password">
         <p>Passwords must be a minimum of 12 characters and include 1 capital letter, 1 number, and 1 special
             character</p>
-        <button>Show Password</button>
+        <button class="form__show__password">Show Password</button>
     </div>
 
     <div class="form__center">
         <input type="submit" value="Register">
     </div>
 </form>
+
+<script>
+	function showPassword() {
+		const showBtn = document.querySelector(".form__show__password")
+		const passInput = document.querySelector("#account_password")
+
+		showBtn.addEventListener("click", () => {
+			const passType = passInput.getAttribute("type")
+
+			if (passType === "password") {
+				passInput.setAttribute("type", "text")
+				showBtn.textContent = "Hide Password"
+			} else {
+				passInput.setAttribute("type", "password")
+				showBtn.textContent = "Show Password"
+			}
+		})
+	}
+
+	showPassword()
+</script>
