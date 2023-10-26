@@ -168,6 +168,15 @@ form input, form button {
   border-radius: 8px;
   background: white;
 }
+form input {
+  transition: background-color 0.5s;
+}
+form input:valid {
+  background: #5fd391;
+}
+form input:invalid:focus {
+  background: #d35f5f;
+}
 form button {
   width: 100%;
   margin: 0 auto;

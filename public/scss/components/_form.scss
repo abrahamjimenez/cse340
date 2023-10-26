@@ -22,6 +22,18 @@ form {
 		background: white;
 	}
 
+	input {
+		transition: background-color .5s;
+
+		&:valid {
+			background: #5fd391;
+		}
+
+		&:invalid:focus {
+			background: #d35f5f;
+		}
+	}
+
 	button {
 		width: 100%;
 		margin: 0 auto;
