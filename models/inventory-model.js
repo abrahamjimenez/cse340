@@ -39,4 +39,13 @@ async function getDetailedView(inventory_id) {
 	}
 }
 
-module.exports = {getClassifications, getInventoryByClassificationId, getDetailedView};
+async function addNavigationItem(classification_name) {
+	try {
+		const sql = "INSERT INTO public.classification (classification_name) VALUES ($1)";
+		return await pool.query(sql, [classification_name]);
+	} catch (error) {
+		return error.message;
+	}
+}
+
+module.exports = {getClassifications, getInventoryByClassificationId, getDetailedView, addNavigationItem};

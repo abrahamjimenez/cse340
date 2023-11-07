@@ -1,5 +1,6 @@
 const invModel = require("../models/inventory-model");
 const utilities = require("../utilities/");
+const accountModel = require("../models/account-model");
 
 const invCont = {};
 
@@ -36,6 +37,54 @@ invCont.buildDetailedView = async function (req, res, next) {
 		title: `${invMake} ${invModelData} ${invYear}`,
 		nav,
 		grid,
+	});
+};
+
+invCont.buildManagement = async function (req, res, next) {
+	let nav = await utilities.getNav();
+	res.render("./inventory/management", {
+		title: "Management",
+		nav,
+		errors: null,
+	});
+};
+
+invCont.AddClassification = async function (req, res, next) {
+	const {
+		classification_name,
+	} = req.body;
+
+	const addResult = await invModel.addNavigationItem(
+		classification_name
+	);
+
+	if (addResult) {
+		req.flash(
+			"notice",
+			`Congratulations, ${classification_name} has been added.`
+		);
+		let nav = await utilities.getNav();
+		res.status(201).render("inventory/management", {
+			title: "Login",
+			nav,
+			errors: null,
+		});
+	} else {
+		req.flash("notice", "Sorry, the add failed.");
+		res.status(501).render("inventory/classification", {
+			title: "Login",
+			nav,
+			errors: null,
+		});
+	}
+};
+
+invCont.buildAddClassification = async function (req, res, next) {
+	let nav = await utilities.getNav();
+	res.render("inventory/add-classification", {
+		title: "Add New Classification",
+		nav,
+		errors: null,
 	});
 };
 
