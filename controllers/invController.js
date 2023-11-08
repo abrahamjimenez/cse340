@@ -65,11 +65,12 @@ invCont.AddClassification = async function (req, res, next) {
 		);
 		let nav = await utilities.getNav();
 		res.status(201).render("inventory/management", {
-			title: "Login",
+			title: "Management",
 			nav,
 			errors: null,
 		});
 	} else {
+		let nav = await utilities.getNav();
 		req.flash("notice", "Sorry, the add failed.");
 		res.status(501).render("inventory/classification", {
 			title: "Login",
@@ -134,7 +135,7 @@ invCont.addInventory = async function (req, res, next) {
 		inv_year,
 		inv_miles,
 		inv_color,
-		2
+		classification_id
 	);
 
 	if (addResult) {
@@ -144,7 +145,7 @@ invCont.addInventory = async function (req, res, next) {
 		);
 		let nav = await utilities.getNav();
 		res.status(201).render("inventory/management", {
-			title: "Login",
+			title: "Management",
 			nav,
 			errors: null,
 		});
