@@ -106,7 +106,7 @@ validate.checkLogData = async (req, res, next) => {
 		let nav = await utilities.getNav();
 		res.render("account/login", {
 			errors,
-			title: "Registration",
+			title: "Login",
 			nav,
 			account_email,
 		});
