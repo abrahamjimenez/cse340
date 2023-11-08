@@ -88,4 +88,75 @@ invCont.buildAddClassification = async function (req, res, next) {
 	});
 };
 
+invCont.buildAddInventory = async function (req, res, next) {
+	let nav = await utilities.getNav();
+	let options = await invCont.buildOptions();
+	res.render("inventory/add-inventory", {
+		title: "Add New Inventory",
+		nav,
+		errors: null,
+		options
+	});
+};
+
+// Build the options for the classification select
+invCont.buildOptions = async function (req, res, next) {
+	let data = await invModel.getClassifications();
+	let options = "";
+	data.rows.forEach((row) => {
+		options += `<option value="${row.classification_id}">${row.classification_name}</option>`;
+	});
+	return options;
+};
+
+invCont.addInventory = async function (req, res, next) {
+
+	const {
+		inv_make,
+		inv_model,
+		inv_description,
+		inv_image,
+		inv_thumbnail,
+		inv_price,
+		inv_year,
+		inv_miles,
+		inv_color,
+		classification_id
+	} = req.body;
+
+	const addResult = await invModel.addInventoryItem(
+		inv_make,
+		inv_model,
+		inv_description,
+		inv_image,
+		inv_thumbnail,
+		inv_price,
+		inv_year,
+		inv_miles,
+		inv_color,
+		2
+	);
+
+	if (addResult) {
+		req.flash(
+			"notice",
+			`Congratulations, ${inv_make} has been added.`
+		);
+		let nav = await utilities.getNav();
+		res.status(201).render("inventory/management", {
+			title: "Login",
+			nav,
+			errors: null,
+		});
+	} else {
+		let nav = await utilities.getNav();
+		req.flash("notice", "Sorry, the add failed.");
+		res.status(501).render("inventory/classification", {
+			title: "Login",
+			nav,
+			errors: null,
+		});
+	}
+};
+
 module.exports = invCont;
