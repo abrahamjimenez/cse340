@@ -25,8 +25,7 @@
            placeholder="Min 3 characters" required>
 
     <label for="inv_description">Description</label>
-    <input type="text" id="inv_description" name="inv_description" value="<%= locals.inv_description ;%>" pattern=".{3,}"
-           placeholder="Min 3 characters" required>
+    <textarea id="inv_description" name="inv_description" value="<%= locals.inv_description ;%>" required></textarea>
 
     <label for="inv_image">Image Path:</label>
     <input type="text" id="inv_image" name="inv_image" value="<%= locals.inv_image ;%>" required>

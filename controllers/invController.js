@@ -72,8 +72,8 @@ invCont.AddClassification = async function (req, res, next) {
 	} else {
 		let nav = await utilities.getNav();
 		req.flash("notice", "Sorry, the add failed.");
-		res.status(501).render("inventory/classification", {
-			title: "Login",
+		res.status(501).render("inventory/management", {
+			title: "Management",
 			nav,
 			errors: null,
 		});

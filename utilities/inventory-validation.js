@@ -78,13 +78,19 @@ validate.addInventoryRules = () => {
 			.withMessage("Please provide a model."), // on error this message is sent.
 
 		body("inv_price")
-			.trim(),
+			.trim()
+			.isLength({min: 1})
+			.withMessage("Please provide a price."), // on error this message is sent.
 
 		body("inv_year")
-			.trim(),
+			.trim()
+			.isLength({min: 4, max: 4})
+			.withMessage("Please provide a 4 digit year."), // on error this message is sent.
 
 		body("inv_miles")
-			.trim(),
+			.trim()
+			.isLength({min: 1})
+			.withMessage("Please provide a mileage."), // on error this message is sent.
 
 		body("inv_color")
 			.trim()
