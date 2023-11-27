@@ -8,6 +8,9 @@ const invValidate = require("../utilities/inventory-validation");
 // Route to inventory management view
 router.get("/", utilities.handleErrors(invController.buildManagement));
 
+// Route to inv/edit/#
+router.get("/edit/:inventoryId", utilities.handleErrors(invController.buildEditInventory))
+
 // Route to management view
 router.get("/add-classification", utilities.handleErrors(invController.buildAddClassification));
 
@@ -27,6 +30,14 @@ router.post(
 	invValidate.checkAddInventoryData,
 	utilities.handleErrors(invController.addInventory)
 );
+
+// Edit inventory post
+router.post(
+	"/update",
+	invValidate.addInventoryRules(),
+	invValidate.checkAddInventoryData,
+	utilities.handleErrors(invController.editInventory)
+)
 
 // Route to build inventory by classification view
 router.get("/type/:classificationId", utilities.handleErrors(invController.buildByClassificationId));

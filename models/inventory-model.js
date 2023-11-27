@@ -88,5 +88,5 @@ module.exports = {
 	getInventoryByClassificationId,
 	getDetailedView,
 	addNavigationItem,
-	addInventoryItem
+	addInventoryItem,
 };
