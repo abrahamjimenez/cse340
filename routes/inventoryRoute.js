@@ -33,10 +33,10 @@ router.post(
 
 // Edit inventory post
 router.post(
-	"/update",
+	"/update/",
 	invValidate.addInventoryRules(),
-	invValidate.checkAddInventoryData,
-	utilities.handleErrors(invController.editInventory)
+	invValidate.checkUpdateInventoryData,
+	utilities.handleErrors(invController.updateInventory)
 )
 
 // Route to build inventory by classification view
