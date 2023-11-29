@@ -123,13 +123,8 @@ async function accountLogin(req, res) {
  *  Process login request
  * ************************************ */
 async function accountLogout(req, res) {
-    let nav = await utilities.getNav();
-
-    res.render("account/logout", {
-        title: "Account",
-        nav,
-        errors: null,
-    });
+    res.clearCookie("jwt")
+    res.redirect("/")
 }
 
 module.exports = {buildLogin, buildRegister, registerAccount, accountLogin, buildAccount, accountLogout};

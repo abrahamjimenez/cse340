@@ -32,7 +32,7 @@ router.post(
 );
 
 router.get(
-    "/account/logout",
+    "/logout",
     utilities.handleErrors(accountsController.accountLogout)
 );
 
