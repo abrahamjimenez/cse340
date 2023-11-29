@@ -12,23 +12,28 @@ router.get("/register", utilities.handleErrors(accountsController.buildRegister)
 
 // Default route for accounts
 router.get("/",
-  utilities.checkLogin,
-  utilities.handleErrors(accountsController.buildAccount));
+    utilities.checkLogin,
+    utilities.handleErrors(accountsController.buildAccount));
 
 // Process the registration data
 router.post(
-  "/register",
-  regValidate.registrationRules(),
-  regValidate.checkRegData,
-  utilities.handleErrors(accountsController.registerAccount)
+    "/register",
+    regValidate.registrationRules(),
+    regValidate.checkRegData,
+    utilities.handleErrors(accountsController.registerAccount),
 );
 
 // Process the login attempt
 router.post(
-  "/login",
-  regValidate.loginRules(),
-  regValidate.checkLogData,
-  utilities.handleErrors(accountsController.accountLogin)
+    "/login",
+    regValidate.loginRules(),
+    regValidate.checkLogData,
+    utilities.handleErrors(accountsController.accountLogin),
+);
+
+router.get(
+    "/account/logout",
+    utilities.handleErrors(accountsController.accountLogout)
 );
 
 module.exports = router;

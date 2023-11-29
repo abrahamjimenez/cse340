@@ -9,7 +9,7 @@ const invValidate = require("../utilities/inventory-validation");
 router.get("/", utilities.handleErrors(invController.buildManagement));
 
 // Route to inv/edit/#
-router.get("/edit/:inventoryId", utilities.handleErrors(invController.buildEditInventory))
+router.get("/edit/:inventoryId", utilities.handleErrors(invController.buildEditInventory));
 
 // Route to management view
 router.get("/add-classification", utilities.handleErrors(invController.buildAddClassification));
@@ -18,26 +18,26 @@ router.get("/add-classification", utilities.handleErrors(invController.buildAddC
 router.get("/add-inventory", utilities.handleErrors(invController.buildAddInventory));
 
 router.post(
-	"/add-classification",
-	invValidate.addClassificationRules(),
-	invValidate.checkAddClassificationData,
-	utilities.handleErrors(invController.AddClassification)
+    "/add-classification",
+    invValidate.addClassificationRules(),
+    invValidate.checkAddClassificationData,
+    utilities.handleErrors(invController.AddClassification),
 );
 
 router.post(
-	"/add-inventory",
-	invValidate.addInventoryRules(),
-	invValidate.checkAddInventoryData,
-	utilities.handleErrors(invController.addInventory)
+    "/add-inventory",
+    invValidate.addInventoryRules(),
+    invValidate.checkAddInventoryData,
+    utilities.handleErrors(invController.addInventory),
 );
 
 // Edit inventory post
 router.post(
-	"/update/",
-	invValidate.addInventoryRules(),
-	invValidate.checkUpdateInventoryData,
-	utilities.handleErrors(invController.updateInventory)
-)
+    "/update/",
+    invValidate.addInventoryRules(),
+    invValidate.checkUpdateInventoryData,
+    utilities.handleErrors(invController.updateInventory),
+);
 
 // Route to build inventory by classification view
 router.get("/type/:classificationId", utilities.handleErrors(invController.buildByClassificationId));
@@ -45,6 +45,6 @@ router.get("/type/:classificationId", utilities.handleErrors(invController.build
 // Route to build specific inventory item detail
 router.get("/detail/:invId", utilities.handleErrors(invController.buildDetailedView));
 
-router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON))
+router.get("/getInventory/:classification_id", utilities.handleErrors(invController.getInventoryJSON));
 
 module.exports = router;
