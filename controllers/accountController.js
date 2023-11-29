@@ -3,6 +3,7 @@ const accountModel = require("../models/account-model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const pool = require("../database/")
 
 /* ****************************************
 *  Deliver login view
@@ -127,4 +128,78 @@ async function accountLogout(req, res) {
     res.redirect("/")
 }
 
-module.exports = {buildLogin, buildRegister, registerAccount, accountLogin, buildAccount, accountLogout};
+async function updateAccount(req, res) {
+    let nav = await utilities.getNav();
+    res.render("account/edit", {
+        title: "Edit Account",
+        nav,
+        errors: null,
+    });
+}
+
+async function updateAccountInfo(req, res) {
+    let nav = await utilities.getNav();
+    const {account_firstname, account_lastname, account_email} = req.body
+
+    console.log(account_firstname, account_lastname, account_email)
+
+    // Get account requesting to be updated
+    const accountData = await accountModel.getAccountByEmail(account_email);
+    console.log(accountData);
+
+    if (!accountData) {
+        return res.status(404).send("Account not found")
+    }
+
+    const updateQuery = `
+        UPDATE account
+        SET account_firstname = $1,
+            account_lastname  = $2
+        WHERE account_email = $3
+    `;
+
+    try {
+        // Request query
+        await pool.query(updateQuery, [account_firstname, account_lastname, account_email])
+
+        // Clear cookie and make new cookie for user
+        res.clearCookie("jwt")
+        setTimeout(() => {
+            const accessToken = jwt.sign({
+                    account_id: accountData.account_id,
+                    account_firstname: account_firstname,
+                    account_lastname: account_lastname,
+                    account_email: account_email,
+                    account_type: accountData.account_type
+                },
+                process.env.ACCESS_TOKEN_SECRET,
+                {expiresIn: 3600 * 1000});
+            res.cookie("jwt", accessToken, {httpOnly: true, maxAge: 3600 * 1000});
+
+            req.flash("success", `Congratulations, ${account_firstname} you've succesfully updated your account information!`);
+            res.status(201).render("account/account", {
+                title: "Edit Account Information",
+                nav,
+                errors: null,
+                account_firstname,
+                account_lastname,
+                account_email,
+            });
+        }, 1000);
+
+    } catch (err) {
+        res.status(500).send("There was an error updating the account")
+        console.error(err.message)
+    }
+}
+
+module.exports = {
+    buildLogin,
+    buildRegister,
+    registerAccount,
+    accountLogin,
+    buildAccount,
+    accountLogout,
+    updateAccount,
+    updateAccountInfo
+};

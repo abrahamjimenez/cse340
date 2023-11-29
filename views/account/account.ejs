@@ -9,5 +9,4 @@
 <% } %>
 
 <p>You're logged in.</p>
-<!--TODO: Protect route-->
-<a href="/account/">Edit Account Information</a>
+<a href="/account/update/<%= locals.accountData.account_id %>">Edit Account Information</a>

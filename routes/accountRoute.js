@@ -36,4 +36,11 @@ router.get(
     utilities.handleErrors(accountsController.accountLogout)
 );
 
+router.get("/update/:accountId", utilities.handleErrors(accountsController.updateAccount))
+
+router.post(
+    "/update/accountInfo",
+    utilities.handleErrors(accountsController.updateAccountInfo)
+)
+
 module.exports = router;
