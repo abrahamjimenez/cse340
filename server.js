@@ -12,6 +12,7 @@ const env = require("dotenv").config();
 const app = express();
 const static = require("./routes/static");
 const baseController = require("./controllers/baseController");
+const invCont = require("./controllers/invController")
 const inventoryRoute = require("./routes/inventoryRoute");
 const accountRoute = require("./routes/accountRoute");
 const utilities = require("./utilities/index");
@@ -67,7 +68,11 @@ app.get("/", utilities.handleErrors(baseController.buildHome));
 app.use("/account", accountRoute);
 
 // Inventory Routes
-app.use("/inv", inventoryRoute);
+app.use(
+    "/inv",
+    invCont.checkAdmin,
+    inventoryRoute
+);
 
 // 500 Route
 app.get("/500", utilities.handleErrors(baseController.build500));

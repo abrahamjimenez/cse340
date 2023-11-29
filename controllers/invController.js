@@ -261,4 +261,20 @@ invCont.updateInventory = async function (req, res, next) {
     }
 }
 
+invCont.checkAdmin = (req, res, next) => {
+    if (res.locals.loggedin) {
+        const account = res.locals.accountData;
+
+        if (account.account_type === "Admin" || account.account_type === "Employee") {
+            next();
+        } else {
+            res.redirect("/")
+            return;
+        }
+    } else {
+        res.redirect("/account/login")
+        return;
+    }
+}
+
 module.exports = invCont;
