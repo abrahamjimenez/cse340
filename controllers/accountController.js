@@ -193,6 +193,21 @@ async function updateAccountInfo(req, res) {
     }
 }
 
+async function updateAccountPassword(req, res) {
+    const {account_password} = req.body;
+    const account_id = req.locals.account_id
+
+    console.log("password change starting")
+
+    try {
+        const hashedPassword = bcrypt.hashSync(account_password, 10)
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('An error occurred while updating your password');
+    }
+}
+
 module.exports = {
     buildLogin,
     buildRegister,
@@ -201,5 +216,6 @@ module.exports = {
     buildAccount,
     accountLogout,
     updateAccount,
-    updateAccountInfo
+    updateAccountInfo,
+    updateAccountPassword
 };

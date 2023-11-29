@@ -43,4 +43,9 @@ router.post(
     utilities.handleErrors(accountsController.updateAccountInfo)
 )
 
+router.post(
+    "/update/accountPassword",
+    utilities.handleErrors(accountsController.updateAccountPassword)
+)
+
 module.exports = router;

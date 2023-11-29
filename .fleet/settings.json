@@ -1,3 +1,4 @@
 {
-    "autoSave": false
+    "autoSave": false,
+    "nodejs.typescript.rebuildOnChanges": false
 }
