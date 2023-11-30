@@ -195,18 +195,43 @@ async function updateAccountInfo(req, res) {
 
 async function updateAccountPassword(req, res) {
     const {account_password} = req.body;
-    const account_id = req.locals.account_id
+    const account_id = res.locals.accountData.account_id;
+    let nav = await utilities.getNav();
 
-    console.log("password change starting")
+    const updateQuery = `
+        UPDATE account
+        SET account_password = $1
+        WHERE account_id = $2
+    `;
 
     try {
-        const hashedPassword = bcrypt.hashSync(account_password, 10)
+        // Set the updated password in accountData before hashing
+        res.locals.accountData.account_password = account_password;
 
+        // Hash the updated password
+        const hashedPassword = bcrypt.hashSync(account_password, 10);
+
+        // Update the password in the database
+        await pool.query(updateQuery, [hashedPassword, account_id]);
+
+        // Log the successful update
+        console.log(`Password updated for account ID: ${account_id}`);
+
+        req.flash("success", `Congratulations, ${res.locals.accountData.account_firstname}, your account password has been updated successfully!`);
+        res.status(200).render("account/account", {
+            title: "Edit Account Information",
+            nav,
+            errors: null,
+        });
     } catch (err) {
-        console.error(err);
+        console.error("Error updating password:", err);
+
+        // Log the specific error message in the flash message for debugging
+        req.flash("error", `Error updating password: ${err.message}`);
         res.status(500).send('An error occurred while updating your password');
     }
 }
+
 
 module.exports = {
     buildLogin,
