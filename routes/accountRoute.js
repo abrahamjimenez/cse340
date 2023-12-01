@@ -48,12 +48,16 @@ router.get(
 
 router.post(
     "/update/accountInfo",
+    regValidate.updateAccountInfoRules(),
+    regValidate.checkUpdateAccountInfoData,
     utilities.handleErrors(accountsController.updateAccountInfo),
 );
 
 router.post(
     "/update/accountPassword",
-    utilities.handleErrors(accountsController.updateAccountPassword),
+    regValidate.updateAccountPasswordRules(),
+    regValidate.checkUpdateAccountPasswordData,
+    utilities.handleErrors(accountsController.updateAccountPassword)
 );
 
 module.exports = router;
