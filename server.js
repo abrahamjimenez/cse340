@@ -70,7 +70,6 @@ app.use("/account", accountRoute);
 // Inventory Routes
 app.use(
     "/inv",
-    invCont.checkAdmin,
     inventoryRoute
 );
 

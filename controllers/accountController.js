@@ -3,7 +3,7 @@ const accountModel = require("../models/account-model");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
-const pool = require("../database/")
+const pool = require("../database/");
 
 /* ****************************************
 *  Deliver login view
@@ -115,13 +115,13 @@ async function accountLogin(req, res) {
             res.cookie("jwt", accessToken, {httpOnly: true, maxAge: 3600 * 1000});
             return res.redirect("/account/");
         } else {
-            req.flash("notice", "Invalid email or password. Please try again.")
+            req.flash("notice", "Invalid email or password. Please try again.");
             res.status(403).render("account/login", {
                 title: "Login",
                 nav,
                 errors: null,
-                account_email
-            })
+                account_email,
+            });
         }
     } catch (error) {
         return new Error("Access Forbidden");
@@ -132,8 +132,8 @@ async function accountLogin(req, res) {
  *  Process login request
  * ************************************ */
 async function accountLogout(req, res) {
-    res.clearCookie("jwt")
-    res.redirect("/")
+    res.clearCookie("jwt");
+    res.redirect("/");
 }
 
 async function updateAccount(req, res) {
@@ -147,16 +147,17 @@ async function updateAccount(req, res) {
 
 async function updateAccountInfo(req, res) {
     let nav = await utilities.getNav();
-    const {account_firstname, account_lastname, account_email} = req.body
+    const {account_firstname, account_lastname, account_email} = req.body;
 
-    console.log(account_firstname, account_lastname, account_email)
+    const account_id = res.locals.accountData.account_id;
+    // console.log(account_firstname, account_lastname, account_email)
 
     // Get account requesting to be updated
     const accountData = await accountModel.getAccountByEmail(account_email);
     console.log(accountData);
 
     if (!accountData) {
-        return res.status(404).send("Account not found")
+        return res.status(404).send("Account not found");
     }
 
     const updateQuery = `
@@ -168,36 +169,34 @@ async function updateAccountInfo(req, res) {
 
     try {
         // Request query
-        await pool.query(updateQuery, [account_firstname, account_lastname, account_email])
+        await pool.query(updateQuery, [account_firstname, account_lastname, account_email]);
 
         // Clear cookie and make new cookie for user
-        res.clearCookie("jwt")
-        setTimeout(() => {
-            const accessToken = jwt.sign({
-                    account_id: accountData.account_id,
-                    account_firstname: account_firstname,
-                    account_lastname: account_lastname,
-                    account_email: account_email,
-                    account_type: accountData.account_type
-                },
-                process.env.ACCESS_TOKEN_SECRET,
-                {expiresIn: 3600 * 1000});
-            res.cookie("jwt", accessToken, {httpOnly: true, maxAge: 3600 * 1000});
+        res.clearCookie("jwt");
+        const accessToken = jwt.sign({
+                account_id: accountData.account_id,
+                account_firstname: account_firstname,
+                account_lastname: account_lastname,
+                account_email: account_email,
+                account_type: accountData.account_type,
+            },
+            process.env.ACCESS_TOKEN_SECRET,
+            {expiresIn: 3600 * 1000});
+        res.cookie("jwt", accessToken, {httpOnly: true, maxAge: 3600 * 1000});
 
-            req.flash("success", `Congratulations, ${account_firstname} you've succesfully updated your account information!`);
-            res.status(201).render("account/account", {
-                title: "Edit Account Information",
-                nav,
-                errors: null,
-                account_firstname,
-                account_lastname,
-                account_email,
-            });
-        }, 1000);
+        req.flash("success", `Congratulations, ${account_firstname} you've succesfully updated your account information!`);
+        res.status(201).render("account/account", {
+            title: "Edit Account Information",
+            nav,
+            errors: null,
+            account_firstname,
+            account_lastname,
+            account_email,
+        });
 
     } catch (err) {
-        res.status(500).send("There was an error updating the account")
-        console.error(err.message)
+        res.status(500).send("There was an error updating the account");
+        console.error(err.message);
     }
 }
 
@@ -236,7 +235,7 @@ async function updateAccountPassword(req, res) {
 
         // Log the specific error message in the flash message for debugging
         req.flash("error", `Error updating password: ${err.message}`);
-        res.status(500).send('An error occurred while updating your password');
+        res.status(500).send("An error occurred while updating your password");
     }
 }
 
@@ -250,5 +249,5 @@ module.exports = {
     accountLogout,
     updateAccount,
     updateAccountInfo,
-    updateAccountPassword
+    updateAccountPassword,
 };
