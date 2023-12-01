@@ -166,46 +166,46 @@ invCont.addInventory = async function (req, res, next) {
  *  Return Inventory by Classification As JSON
  * ************************** */
 invCont.getInventoryJSON = async (req, res, next) => {
-    const classification_id = parseInt(req.params.classification_id)
-    const invData = await invModel.getInventoryByClassificationId(classification_id)
+    const classification_id = parseInt(req.params.classification_id);
+    const invData = await invModel.getInventoryByClassificationId(classification_id);
     if (invData[0].inv_id) {
-        return res.json(invData)
+        return res.json(invData);
     } else {
-        next(new Error("No data returned"))
+        next(new Error("No data returned"));
     }
-}
+};
 
 // Edit inventory view
 invCont.buildEditInventory = async (req, res, next) => {
     const inventoryId = parseInt(req.params.inventoryId);
     let nav = await utilities.getNav();
-    const data = await invModel.getInventoryByClassificationId(inventoryId);
-    const options = await invCont.buildOptions(data.classification_id)
-    const name = ` ${data && data.length > 0 && data[0].inv_make ? data[0].inv_make : ''} ${data && data.length > 0 && data[0].inv_model ? data[0].inv_model : ''}`;
+    const invData = await invModel.getInventoryById(inventoryId);
+    const data = invData[0];
+    const options = await invCont.buildOptions(data.classification_id);
     res.render("inventory/edit-inventory", {
-        title: "Edit " + name,
+        title: `Edit ${data.inv_make} ${data.inv_model}`,
         nav,
         options: options,
         errors: null,
-        inv_id: data && data.inv_id ? data.inv_id : (data[0] ? data[0].inv_id : ''),
-        inv_make: data && data.inv_make ? data.inv_make : (data[0] ? data[0].inv_make : ''),
-        inv_model: data && data.inv_model ? data.inv_model : (data[0] ? data[0].inv_model : ''),
-        inv_year: data && data.inv_year ? data.inv_year : (data[0] ? data[0].inv_year : ''),
-        inv_description: data && data.inv_description ? data.inv_description : (data[0] ? data[0].inv_description : ''),
-        inv_image: data && data.inv_image ? data.inv_image : (data[0] ? data[0].inv_image : ''),
-        inv_thumbnail: data && data.inv_thumbnail ? data.inv_thumbnail : (data[0] ? data[0].inv_thumbnail : ''),
-        inv_price: data && data.inv_price ? data.inv_price : (data[0] ? data[0].inv_price : ''),
-        inv_miles: data && data.inv_miles ? data.inv_miles : (data[0] ? data[0].inv_miles : ''),
-        inv_color: data && data.inv_color ? data.inv_color : (data[0] ? data[0].inv_color : ''),
-        classification_id: data && data.classification_id ? data.classification_id : (data[0] ? data[0].classification_id : '')
+        inv_id: data.inv_id,
+        inv_make: data.inv_make,
+        inv_model: data.inv_model,
+        inv_year: data.inv_year,
+        inv_description: data.inv_description,
+        inv_image: data.inv_image,
+        inv_thumbnail: data.inv_thumbnail,
+        inv_price: data.inv_price,
+        inv_miles: data.inv_miles,
+        inv_color: data.inv_color,
+        classification_id: data.classification_id
     });
-}
+};
 
 /* ***************************
  *  Update Inventory Data
  * ************************** */
 invCont.updateInventory = async function (req, res, next) {
-    let nav = await utilities.getNav()
+    let nav = await utilities.getNav();
     const {
         inv_id,
         inv_make,
@@ -218,7 +218,7 @@ invCont.updateInventory = async function (req, res, next) {
         inv_miles,
         inv_color,
         classification_id,
-    } = req.body
+    } = req.body;
     const updateResult = await invModel.updateInventory(
         inv_id,
         inv_make,
@@ -231,16 +231,16 @@ invCont.updateInventory = async function (req, res, next) {
         inv_miles,
         inv_color,
         classification_id
-    )
+    );
 
     if (updateResult) {
-        const itemName = updateResult.inv_make + " " + updateResult.inv_model
-        req.flash("notice", `The ${itemName} was successfully updated.`)
-        res.redirect("/inv/")
+        const itemName = updateResult.inv_make + " " + updateResult.inv_model;
+        req.flash("notice", `The ${itemName} was successfully updated.`);
+        res.redirect("/inv/");
     } else {
-        const classificationSelect = await utilities.buildClassificationList(classification_id)
-        const itemName = `${inv_make} ${inv_model}`
-        req.flash("notice", "Sorry, the insert failed.")
+        const classificationSelect = await utilities.buildClassificationList(classification_id);
+        const itemName = `${inv_make} ${inv_model}`;
+        req.flash("notice", "Sorry, the insert failed.");
         res.status(501).render("inventory/edit-inventory", {
             title: "Edit " + itemName,
             nav,
@@ -257,9 +257,9 @@ invCont.updateInventory = async function (req, res, next) {
             inv_miles,
             inv_color,
             classification_id
-        })
+        });
     }
-}
+};
 
 invCont.checkAdmin = (req, res, next) => {
     if (res.locals.loggedin) {
@@ -268,13 +268,13 @@ invCont.checkAdmin = (req, res, next) => {
         if (account.account_type === "Admin" || account.account_type === "Employee") {
             next();
         } else {
-            res.redirect("/")
+            res.redirect("/");
             return;
         }
     } else {
-        res.redirect("/account/login")
+        res.redirect("/account/login");
         return;
     }
-}
+};
 
 module.exports = invCont;

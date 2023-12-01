@@ -122,6 +122,20 @@ async function updateInventory(
     }
 }
 
+async function getInventoryById(invId) {
+    try {
+        const data = await pool.query(`
+                    SELECT *
+                    FROM public.inventory
+                    WHERE inv_id = $1`,
+            [invId],
+        );
+        return data.rows;
+    } catch (err) {
+        console.error(`getInventoryById error ${err}`);
+    }
+}
+
 module.exports = {
     getClassifications,
     getInventoryByClassificationId,
@@ -129,4 +143,5 @@ module.exports = {
     addNavigationItem,
     addInventoryItem,
     updateInventory,
+    getInventoryById
 };
