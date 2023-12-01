@@ -19,6 +19,18 @@ router.get(
     utilities.handleErrors(invController.buildEditInventory)
 );
 
+// Route to inv/delete/#
+router.get(
+    "/delete/:inventoryId",
+    invCont.checkAdmin,
+    utilities.handleErrors(invController.buildDeleteInventory)
+);
+
+router.delete(
+    "/delete",
+    utilities.handleErrors(invController.deleteInventoryItem)
+)
+
 // Route to management view
 router.get(
     "/add-classification",

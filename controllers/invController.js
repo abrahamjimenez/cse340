@@ -1,6 +1,8 @@
 const invModel = require("../models/inventory-model");
 const utilities = require("../utilities/");
 const accountModel = require("../models/account-model");
+const pool = require("../database/");
+const {locals} = require("express/lib/application");
 
 const invCont = {};
 
@@ -274,6 +276,38 @@ invCont.checkAdmin = (req, res, next) => {
     } else {
         res.redirect("/account/login");
         return;
+    }
+};
+
+invCont.buildDeleteInventory = async (req, res, next) => {
+    const inventoryId = parseInt(req.params.inventoryId);
+    let nav = await utilities.getNav();
+    const invData = await invModel.getInventoryById(inventoryId);
+    const data = invData[0];
+    res.render("inventory/delete-inventory", {
+        title: `Delete ${data.inv_make} ${data.inv_model}`,
+        nav,
+        errors: null,
+        inv_id: data.inv_id,
+        inv_make: data.inv_make,
+        inv_model: data.inv_model,
+        inv_year: data.inv_year,
+        inv_price: data.inv_price,
+        classification_id: data.classification_id
+    });
+};
+
+invCont.buildDeleteInventory = async (req, res) => {
+    const inventoryId = req.params.inventoryId;
+
+    try {
+        await invModel.deleteInventoryItem(inventoryId);
+        req.flash("success", "Inventory item has been successfully deleted");
+        res.redirect("/inv");
+    } catch (err) {
+        console.error("Error deleting inventory item:", err);
+        req.flash("notice", "Error deleting inventory item.");
+        res.status(500).redirect("/inv");
     }
 };
 
