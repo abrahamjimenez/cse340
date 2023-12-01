@@ -153,23 +153,16 @@ async function updateAccountInfo(req, res) {
     // console.log(account_firstname, account_lastname, account_email)
 
     // Get account requesting to be updated
-    const accountData = await accountModel.getAccountByEmail(account_email);
+    const accountData = await accountModel.getAccountById(account_id);
     console.log(accountData);
 
     if (!accountData) {
         return res.status(404).send("Account not found");
     }
 
-    const updateQuery = `
-        UPDATE account
-        SET account_firstname = $1,
-            account_lastname  = $2
-        WHERE account_email = $3
-    `;
-
     try {
-        // Request query
-        await pool.query(updateQuery, [account_firstname, account_lastname, account_email]);
+        // Update account info query from model
+        await accountModel.updateAccount(accountData)
 
         // Clear cookie and make new cookie for user
         res.clearCookie("jwt");
