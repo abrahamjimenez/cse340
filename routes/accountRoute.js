@@ -5,10 +5,15 @@ const accountsController = require("../controllers/accountController");
 const regValidate = require("../utilities/account-validation");
 
 // Route to build login page in account
-router.get("/login", utilities.handleErrors(accountsController.buildLogin));
+router.get(
+    "/login",
+    utilities.handleErrors(accountsController.buildLogin),
+);
 
 // Route to build register page in account
-router.get("/register", utilities.handleErrors(accountsController.buildRegister));
+router.get("/register",
+    utilities.handleErrors(accountsController.buildRegister),
+);
 
 // Default route for accounts
 router.get("/",
@@ -33,19 +38,22 @@ router.post(
 
 router.get(
     "/logout",
-    utilities.handleErrors(accountsController.accountLogout)
+    utilities.handleErrors(accountsController.accountLogout),
 );
 
-router.get("/update/:accountId", utilities.handleErrors(accountsController.updateAccount))
+router.get(
+    "/update/:accountId",
+    utilities.handleErrors(accountsController.updateAccount),
+);
 
 router.post(
     "/update/accountInfo",
-    utilities.handleErrors(accountsController.updateAccountInfo)
-)
+    utilities.handleErrors(accountsController.updateAccountInfo),
+);
 
 router.post(
     "/update/accountPassword",
-    utilities.handleErrors(accountsController.updateAccountPassword)
-)
+    utilities.handleErrors(accountsController.updateAccountPassword),
+);
 
 module.exports = router;
